@@ -1,11 +1,11 @@
 # git merge
 
-> Merge branches
+> Merge branches.
 
-- Merge a branch with your current branch
+- Merge a branch with your current branch:
 
-`git merge {{BRANCH-NAME}}`
+`git merge {{branch_name}}`
 
-- Edit the merge message
+- Edit the merge message:
 
-`git merge -e {{BRANCH-NAME}}`
+`git merge -e {{branch_name}}`

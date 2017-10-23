@@ -1,15 +1,23 @@
 # rm
 
-> Remove files or directories
+> Remove files or directories.
 
-- Remove files from arbitrary locations
+- Remove files from arbitrary locations:
 
-`rm {{/path/to/file}} {{/otherpath/to/file2}}`
+`rm {{path/to/file}} {{path/to/another/file}}`
 
-- Remove recursively a directory and all it's subdirectories
+- Recursively remove a directory and all its subdirectories:
 
-`rm -r {{/path/to/folder}}`
+`rm -r {{path/to/folder}}`
 
-- Prompt before every removal
+- Forcibly remove a directory, without prompting for confirmation or showing error messages:
 
-`rm -i {{\*}}`
+`rm -rf {{path/to/folder}}`
+
+- Interactively remove multiple files, with a prompt before every removal:
+
+`rm -i {{file(s)}}`
+
+- Remove files in verbose mode, printing a message for each removed file:
+
+`rm -v {{path/to/folder/*}}`

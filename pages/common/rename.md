@@ -1,20 +1,23 @@
 # rename
 
-> renames multiple files
+> Renames multiple files.
 
-- Change foo to bar in matching filenames
+- Rename files using a Perl Common Regular Expression (substitute 'foo' with 'bar' wherever found):
 
-`rename {{'s/foo/bar/'}} {{*.txt}}`
+`rename {{'s/foo/bar/'}} {{\*}}`
 
-- Convert to lower case
+- Dry-run - display which renames would occur without performing them:
 
-`rename -c {{*.txt}}`
+`rename -n {{'s/foo/bar/'}} {{\*}}`
 
-- Replace whitespace with underscores
+- Force renaming even if the operation would overwrite existing files:
 
-`rename --nows {{*.txt}}`
-`rename 's/\s+/_/g' {{*.txt}}`
+`rename -f {{'s/foo/bar/'}} {{\*}}`
 
-- No action, just show what renames would occur
+- Convert filenames to lower case (use `-f` in case-insensitive filesystems to prevent "already exists" errors):
 
-`rename -n {{'s/foo/bar/'}} {{*.txt}}`
+`rename 'y/A-Z/a-z/' {{\*}}`
+
+- Replace whitespace with underscores:
+
+`rename 's/\s+/_/g' {{\*}}`

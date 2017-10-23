@@ -1,10 +1,19 @@
-# This gitignore file is for this projects concerns.
-# Please set swap files and system folder files for your operating system and
-# editors to be ignored in
-# the 'global ignore file'.
-# See: http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
-#    : search for "global .gitignore"
+# macOS filesystem custom folder attributes
+.DS_Store
 
-# bundler specific
+# Bundler-specific files
 .gem
 .bundle
+
+# NPM-specific files
+node_modules
+npm-debug.log
+
+# A temp file used to store the output from npm test
+# used to update a PR with a comment
+test_result
+
+# We used to have an index file in the repository,
+# but it's been superseded by a static asset
+# hosted at https://tldr-pages.github.io/assets/index.json
+pages/index.json

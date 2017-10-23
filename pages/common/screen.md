@@ -2,26 +2,30 @@
 
 > Hold a session open on a remote server. Manage multiple windows with a single SSH connection.
 
-- Start a new screen session
+- Start a new screen session:
 
 `screen`
 
-- Start a new named screen session
+- Start a new named screen session:
 
-`screen -S {{name}}`
+`screen -S {{session_name}}`
 
-- Show open screen sessions
+- Start a new daemon and log the output to screenlog.x:
+
+`screen -dmLS {{session_name}} {{command}}`
+
+- Show open screen sessions:
 
 `screen -ls`
 
-- Reattach to an open screen
+- Reattach to an open screen:
 
-`screen -r {{screen id}}`
+`screen -r {{session_name}}`
 
-- Detach from inside a screen
+- Detach from inside a screen:
 
-`ctrl+A D`
+`Ctrl + A, D`
 
-- Kill a detached screen
+- Kill a detached screen:
 
-`screen -X -S {{screen id}} quit`
+`screen -X -S {{session_name}} quit`

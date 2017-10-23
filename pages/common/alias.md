@@ -1,24 +1,28 @@
 # alias
 
-> Creates an alias for a word when used
-> as the first word of a command
+> Creates aliases -- words that are replaced by a command string.
+> Aliases expire with the current shell session, unless they're defined in the shell's configuration file, e.g. `~/.bashrc`.
 
-- creating a generic alias
+- Create a generic alias:
 
 `alias {{word}}="{{command}}"`
 
-- remove an aliased command
+- View the command associated to a given alias:
+
+`alias {{word}}`
+
+- Remove an aliased command:
 
 `unalias {{word}}`
 
-- full list of aliased words
+- List all aliased words:
 
 `alias -p`
 
-- turning rm an interative command
+- Turn rm into an interactive command:
 
 `alias {{rm}}="{{rm -i}}"`
 
-- overriding la as ls -a
+- Create `la` as a shortcut for `ls -a`:
 
 `alias {{la}}="{{ls -a}}"`

@@ -1,20 +1,17 @@
 sudo: false
 
-cache: bundler
+language: node_js
 
-language: ruby
+node_js:
+  - 'stable'
 
-rvm:
-- 2.2.2
-
-gemfile:
-- Gemfile
-
-script:
-- make lint
+cache: false
 
 after_success:
 - bash scripts/build.sh
+
+after_failure:
+- cat test_result | python scripts/send_to_bot.py
 
 env:
   global:

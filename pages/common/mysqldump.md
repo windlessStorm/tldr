@@ -1,11 +1,11 @@
 # mysqldump
 
-> Backups mysql databases
+> Backups MySQL databases.
 
-- creating a backup
+- Create a backup, user will be prompted for a password:
 
-`mysqldump -u {{user}} -p{{password}} {{database_name}} > {{filename.sql}}`
+`mysqldump -u {{user}} --password {{database_name}} > {{filename.sql}}`
 
-- restoring a backup
+- Restore a backup, user will be prompted for a password:
 
-`mysql -u {{user}} -p{{password}} {{database_name}} < {{filename.sql}}`
+`mysql -u {{user}} --password {{database_name}} < {{filename.sql}}`

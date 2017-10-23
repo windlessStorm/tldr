@@ -1,21 +1,19 @@
 # more
 
-> Opens a file for reading.
-> Allows movement and search in forward direction only.
-> Doesn't read the entire file (suitable for logs)
+> Open a file for interactive reading, allowing scrolling and search (in forward direction only).
 
-- open a file
+- Open a file:
 
 `more {{source_file}}`
 
-- page down
+- Page down:
 
-`d (next)`
+`<Space>`
 
-- search for a string
+- Search for a string (press `n` to go to the next match):
 
-`/{{something}}   then   n (next)`
+`/{{something}}`
 
-- exit
+- Exit:
 
 `q`
